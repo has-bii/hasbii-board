@@ -2,7 +2,7 @@ meta:
   engine: 4.1.0
   author: "hasbii"
 units:
-  a: 0.5
+  a: 0.75
   mcuw: 21
   mcuh: 51
 points:
@@ -10,6 +10,8 @@ points:
     - key
   zones:
     matrix:
+      anchor:
+        shift: [150, -150]
       columns:
         c6:
         c5:
@@ -179,3 +181,41 @@ outlines:
     - what: outline
       name: _board_screw_heads
       operation: stack
+
+pcbs:
+  hasbii_pcb:
+    template: kicad8
+    outlines:
+      board:
+        outline: board
+    footprints:
+      m2_screws:
+        what: ceoloide/mounting_hole_npth
+        where: /board_screw/
+        params:
+          hole_size: 4.6
+          hole_drill: 2.2
+      switches:
+        what: ceoloide/switch_choc_v1_v2
+        where:
+          - /matrix_c[1-6]_r[1-3]/
+          - /thumbfan_c[1-5]_r[1-2]/
+        params:
+          from: "{{colrow}}"
+          to: "{{col.name}}"
+          choc_v1_support: false
+          include_plated_holes: false
+          reversible: true
+          include_stabilizer_pad: false
+        adjust:
+          rotate: 180
+      diodes:
+        what: ceoloide/diode_tht_sod123
+        where: /key/
+        params:
+          from: "{{colrow}}"
+          to: "{{row}}"
+          reversible: true
+        adjust:
+          shift: [5.7, 0]
+          rotate: 180
