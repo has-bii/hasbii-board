@@ -1,0 +1,54 @@
+meta:
+  engine: 4.1.0
+  author: "hasbii"
+points.zones:
+  matrix:
+    columns:
+      func:
+      pinky:
+      ring.key:
+        stagger: u/4
+      middle.key:
+        stagger: u/4
+      index.key:
+        stagger: -u/4
+      inner.key:
+        stagger: -u/4
+    rows:
+      top:
+      home:
+      bottom:
+
+  thumbfan:
+    anchor:
+      ref: matrix_index_top
+      shift: [-U-8, -U-6]
+    columns:
+      near:
+        rows:
+          upper.skip: true
+      home:
+        rows:
+          upper.skip: true
+      far:
+        key:
+          splay: -12
+          origin: [-u/2, -u/2]
+        rows:
+          upper.skip: true
+      far2.key:
+        splay: -12
+        origin: [-u/2, -u/2]
+      far3.key:
+        splay: -12
+        origin: [-u/2, -u/2]
+    rows:
+      only:
+      upper:
+
+  mcu:
+    key.tags:
+      - helper
+    anchor:
+      - ref: matrix_inner_top
+        shift: [U+2, u*2]

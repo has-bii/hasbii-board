@@ -1,0 +1,16 @@
+{
+  "name": "hasbii-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ergogen ./keyboard.yaml -o ./output"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.2",
+  "dependencies": {
+    "ergogen": "^4.2.1"
+  }
+}

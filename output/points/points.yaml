@@ -1,0 +1,1790 @@
+matrix_func_top:
+    x: 0
+    'y': 0
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: func_top
+        name: matrix_func_top
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            rows: {}
+            key: {}
+            name: func
+        row: top
+        bind:
+            - 10
+            - 10
+            - 0
+            - 0
+matrix_func_home:
+    x: 0
+    'y': 19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: func_home
+        name: matrix_func_home
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            rows: {}
+            key: {}
+            name: func
+        row: home
+        bind:
+            - 10
+            - 10
+            - 10
+            - 0
+matrix_func_bottom:
+    x: 0
+    'y': 38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: func_bottom
+        name: matrix_func_bottom
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            rows: {}
+            key: {}
+            name: func
+        row: bottom
+        bind:
+            - 0
+            - 10
+            - 10
+            - 0
+matrix_pinky_top:
+    x: 19
+    'y': 0
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: pinky_top
+        name: matrix_pinky_top
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            rows: {}
+            key: {}
+            name: pinky
+        row: top
+        bind:
+            - 10
+            - 0
+            - 0
+            - 10
+matrix_pinky_home:
+    x: 19
+    'y': 19
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: pinky_home
+        name: matrix_pinky_home
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            rows: {}
+            key: {}
+            name: pinky
+        row: home
+        bind:
+            - 10
+            - 10
+            - 10
+            - 10
+matrix_pinky_bottom:
+    x: 19
+    'y': 38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: pinky_bottom
+        name: matrix_pinky_bottom
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            rows: {}
+            key: {}
+            name: pinky
+        row: bottom
+        bind:
+            - 0
+            - 10
+            - 10
+            - 10
+matrix_ring_top:
+    x: 38
+    'y': 4.75
+    r: 0
+    meta:
+        stagger: 4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: ring_top
+        name: matrix_ring_top
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: u/4
+            rows: {}
+            name: ring
+        row: top
+        bind:
+            - 10
+            - 0
+            - 0
+            - 10
+matrix_ring_home:
+    x: 38
+    'y': 23.75
+    r: 0
+    meta:
+        stagger: 4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: ring_home
+        name: matrix_ring_home
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: u/4
+            rows: {}
+            name: ring
+        row: home
+        bind:
+            - 10
+            - 10
+            - 10
+            - 10
+matrix_ring_bottom:
+    x: 38
+    'y': 42.75
+    r: 0
+    meta:
+        stagger: 4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: ring_bottom
+        name: matrix_ring_bottom
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: u/4
+            rows: {}
+            name: ring
+        row: bottom
+        bind:
+            - 0
+            - 10
+            - 10
+            - 0
+matrix_middle_top:
+    x: 57
+    'y': 9.5
+    r: 0
+    meta:
+        stagger: 4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: middle_top
+        name: matrix_middle_top
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: u/4
+            rows: {}
+            name: middle
+        row: top
+        bind:
+            - 10
+            - 10
+            - 0
+            - 10
+matrix_middle_home:
+    x: 57
+    'y': 28.5
+    r: 0
+    meta:
+        stagger: 4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: middle_home
+        name: matrix_middle_home
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: u/4
+            rows: {}
+            name: middle
+        row: home
+        bind:
+            - 10
+            - 10
+            - 10
+            - 10
+matrix_middle_bottom:
+    x: 57
+    'y': 47.5
+    r: 0
+    meta:
+        stagger: 4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: middle_bottom
+        name: matrix_middle_bottom
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: u/4
+            rows: {}
+            name: middle
+        row: bottom
+        bind:
+            - 0
+            - 0
+            - 10
+            - 0
+matrix_index_top:
+    x: 76
+    'y': 4.75
+    r: 0
+    meta:
+        stagger: -4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: index_top
+        name: matrix_index_top
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: '-u/4'
+            rows: {}
+            name: index
+        row: top
+        bind:
+            - 10
+            - 10
+            - 0
+            - 0
+matrix_index_home:
+    x: 76
+    'y': 23.75
+    r: 0
+    meta:
+        stagger: -4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: index_home
+        name: matrix_index_home
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: '-u/4'
+            rows: {}
+            name: index
+        row: home
+        bind:
+            - 10
+            - 10
+            - 10
+            - 10
+matrix_index_bottom:
+    x: 76
+    'y': 42.75
+    r: 0
+    meta:
+        stagger: -4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: index_bottom
+        name: matrix_index_bottom
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: '-u/4'
+            rows: {}
+            name: index
+        row: bottom
+        bind:
+            - 0
+            - 0
+            - 10
+            - 10
+matrix_inner_top:
+    x: 95
+    'y': 0
+    r: 0
+    meta:
+        stagger: -4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: inner_top
+        name: matrix_inner_top
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: '-u/4'
+            rows: {}
+            name: inner
+        row: top
+        bind:
+            - 10
+            - 0
+            - 0
+            - 0
+matrix_inner_home:
+    x: 95
+    'y': 19
+    r: 0
+    meta:
+        stagger: -4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: inner_home
+        name: matrix_inner_home
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: '-u/4'
+            rows: {}
+            name: inner
+        row: home
+        bind:
+            - 10
+            - 0
+            - 10
+            - 10
+matrix_inner_bottom:
+    x: 95
+    'y': 38
+    r: 0
+    meta:
+        stagger: -4.75
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: inner_bottom
+        name: matrix_inner_bottom
+        zone:
+            columns:
+                func: null
+                pinky: null
+                ring:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: ring
+                middle:
+                    key:
+                        stagger: u/4
+                    rows: {}
+                    name: middle
+                index:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: index
+                inner:
+                    key:
+                        stagger: '-u/4'
+                    rows: {}
+                    name: inner
+            rows:
+                top: {}
+                home: {}
+                bottom: {}
+            name: matrix
+        col:
+            key:
+                stagger: '-u/4'
+            rows: {}
+            name: inner
+        row: bottom
+        bind:
+            - 0
+            - 0
+            - 10
+            - 10
+thumbfan_near_only:
+    x: 48.95
+    'y': -20.3
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: near_only
+        name: thumbfan_near_only
+        zone:
+            columns:
+                near:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: near
+                home:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: home
+                far:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows:
+                        upper:
+                            skip: true
+                    name: far
+                far2:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far2
+                far3:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far3
+            rows:
+                only: {}
+                upper: {}
+            name: thumbfan
+        col:
+            rows:
+                upper:
+                    skip: true
+            key: {}
+            name: near
+        row: only
+        bind:
+            - 0
+            - 10
+            - 0
+            - 0
+thumbfan_home_only:
+    x: 67.95
+    'y': -20.3
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: home_only
+        name: thumbfan_home_only
+        zone:
+            columns:
+                near:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: near
+                home:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: home
+                far:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows:
+                        upper:
+                            skip: true
+                    name: far
+                far2:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far2
+                far3:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far3
+            rows:
+                only: {}
+                upper: {}
+            name: thumbfan
+        col:
+            rows:
+                upper:
+                    skip: true
+            key: {}
+            name: home
+        row: only
+        bind:
+            - 0
+            - 0
+            - 0
+            - 10
+thumbfan_far_only:
+    x: 88.71756330000001
+    'y': -22.4827589
+    r: -12
+    meta:
+        stagger: 0
+        spread: 19
+        splay: -12
+        origin:
+            - -9.5
+            - -9.5
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: far_only
+        name: thumbfan_far_only
+        zone:
+            columns:
+                near:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: near
+                home:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: home
+                far:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows:
+                        upper:
+                            skip: true
+                    name: far
+                far2:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far2
+                far3:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far3
+            rows:
+                only: {}
+                upper: {}
+            name: thumbfan
+        col:
+            key:
+                splay: -12
+                origin:
+                    - '-u/2'
+                    - '-u/2'
+            rows:
+                upper:
+                    skip: true
+            name: far
+        row: only
+        bind:
+            - 0
+            - 10
+            - 0
+            - 0
+thumbfan_far2_only:
+    x: 108.5774844
+    'y': -28.9356384
+    r: -24
+    meta:
+        stagger: 0
+        spread: 19
+        splay: -12
+        origin:
+            - -9.5
+            - -9.5
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: far2_only
+        name: thumbfan_far2_only
+        zone:
+            columns:
+                near:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: near
+                home:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: home
+                far:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows:
+                        upper:
+                            skip: true
+                    name: far
+                far2:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far2
+                far3:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far3
+            rows:
+                only: {}
+                upper: {}
+            name: thumbfan
+        col:
+            key:
+                splay: -12
+                origin:
+                    - '-u/2'
+                    - '-u/2'
+            rows: {}
+            name: far2
+        row: only
+        bind:
+            - 10
+            - 10
+            - 0
+            - 0
+thumbfan_far2_upper:
+    x: 116.30548060000001
+    'y': -11.578274699999998
+    r: -24
+    meta:
+        stagger: 0
+        spread: 19
+        splay: -12
+        origin:
+            - -9.5
+            - -9.5
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: far2_upper
+        name: thumbfan_far2_upper
+        zone:
+            columns:
+                near:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: near
+                home:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: home
+                far:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows:
+                        upper:
+                            skip: true
+                    name: far
+                far2:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far2
+                far3:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far3
+            rows:
+                only: {}
+                upper: {}
+            name: thumbfan
+        col:
+            key:
+                splay: -12
+                origin:
+                    - '-u/2'
+                    - '-u/2'
+            rows: {}
+            name: far2
+        row: upper
+        bind:
+            - 0
+            - 0
+            - 10
+            - 0
+thumbfan_far3_only:
+    x: 126.6617895
+    'y': -39.3766168
+    r: -36
+    meta:
+        stagger: 0
+        spread: 19
+        splay: -12
+        origin:
+            - -9.5
+            - -9.5
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: far3_only
+        name: thumbfan_far3_only
+        zone:
+            columns:
+                near:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: near
+                home:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: home
+                far:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows:
+                        upper:
+                            skip: true
+                    name: far
+                far2:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far2
+                far3:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far3
+            rows:
+                only: {}
+                upper: {}
+            name: thumbfan
+        col:
+            key:
+                splay: -12
+                origin:
+                    - '-u/2'
+                    - '-u/2'
+            rows: {}
+            name: far3
+        row: only
+        bind:
+            - 10
+            - 0
+            - 0
+            - 0
+thumbfan_far3_upper:
+    x: 137.8297093
+    'y': -24.0052939
+    r: -36
+    meta:
+        stagger: 0
+        spread: 19
+        splay: -12
+        origin:
+            - -9.5
+            - -9.5
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: far3_upper
+        name: thumbfan_far3_upper
+        zone:
+            columns:
+                near:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: near
+                home:
+                    rows:
+                        upper:
+                            skip: true
+                    key: {}
+                    name: home
+                far:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows:
+                        upper:
+                            skip: true
+                    name: far
+                far2:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far2
+                far3:
+                    key:
+                        splay: -12
+                        origin:
+                            - '-u/2'
+                            - '-u/2'
+                    rows: {}
+                    name: far3
+            rows:
+                only: {}
+                upper: {}
+            name: thumbfan
+        col:
+            key:
+                splay: -12
+                origin:
+                    - '-u/2'
+                    - '-u/2'
+            rows: {}
+            name: far3
+        row: upper
+        bind:
+            - 0
+            - 0
+            - 10
+            - 10
+mcu:
+    x: 116.05
+    'y': 38
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: default_default
+        name: mcu
+        tags:
+            - helper
+        zone:
+            key:
+                tags:
+                    - helper
+            columns:
+                default:
+                    rows: {}
+                    key: {}
+                    name: default
+            name: mcu
+        col:
+            rows: {}
+            key: {}
+            name: default
+        row: default
+        bind:
+            - 0
+            - 0
+            - 0
+            - 0
