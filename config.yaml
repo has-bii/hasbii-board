@@ -62,6 +62,13 @@ points:
         - ref: matrix_c1_r1
           shift: [u+a*2, -u/4+a]
 
+    display:
+      key.tags:
+        - display
+      anchor:
+        - ref: mcu
+          shift: [0, -3.5]
+
     board_screw_1:
       key.tags:
         - board_screw
@@ -118,6 +125,10 @@ outlines:
     - what: rectangle
       where: [helper]
       size: [mcuw, mcuh]
+  _display:
+    - what: rectangle
+      where: [display]
+      size: [12, 38]
   _board_screw_heads:
     - what: circle
       where: [board_screw]
@@ -127,6 +138,8 @@ outlines:
       name: _keycaps
     - what: outline
       name: _mcu
+    - what: outline
+      name: _display
     - what: polygon
       points:
         - ref: matrix_c6_r1
@@ -178,6 +191,9 @@ outlines:
       operation: stack
     - what: outline
       name: _mcu
+      operation: stack
+    - what: outline
+      name: _display
       operation: stack
     - what: outline
       name: _board_screw_heads
@@ -237,4 +253,13 @@ pcbs:
           P19: "r3"
           P18: "t2"
           P15: "t1"
+          P8: "SDA"
+          P9: "SCL"
           use_rectangular_jumpers: false
+      display:
+        what: ceoloide/display_ssd1306
+        where: display
+        params:
+          reversible: true
+          SDA: "SDA"
+          SCL: "SCL"
