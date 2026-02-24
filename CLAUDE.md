@@ -19,7 +19,10 @@ pnpm run build        # generate all output → ./output/
 - `output/points/` — key positions as YAML, SVG, DXF
 - `output/outlines/` — board and preview outlines as DXF
 - `output/pcbs/` — KiCad PCB file (`hasbii_pcb.kicad_pcb`)
+- `output/cases/` — STL/JSCAD files for case plates
 - `output/source/` — normalized canonical YAML
+
+⚠️ **Warning:** `pnpm run build` overwrites `hasbii_pcb.kicad_pcb`. Never run after making manual edits in KiCad.
 
 ## File Structure
 
@@ -40,9 +43,9 @@ The config has four top-level sections processed in order:
 
 ### `units`
 Custom variables reused throughout the config:
-- `a: 0.5` — small offset/gap used in polygon outline points
-- `mcuw: 21` — MCU width in mm
-- `mcuh: 51` — MCU height in mm
+- `a: 0.75` — small offset/gap used in polygon outline points
+- `mcuw: 17.78` — MCU width in mm
+- `mcuh: 33` — MCU height in mm
 - `u` — built-in Ergogen unit (19mm key spacing)
 - `U` — built-in Ergogen unit (19.05mm, exact)
 
@@ -83,6 +86,13 @@ Named 2D shapes built from operations:
 
 The `board` polygon uses `affect: [x]` / `affect: [y]` to borrow individual axes from different reference points, and `a` as a small expansion gap at stagger transitions.
 
+### `cases`
+Generates 3D STL files by extruding 2D outlines. Ergogen can only extrude straight up — no side cutouts or overhangs.
+- `mounting_plate` — board outline minus switch cutouts, screw holes, MCU (1.5mm)
+- `bottom_plate` — board outline minus screw holes (1.6mm)
+- `top_frame` — board outline minus keycap openings, screw holes, MCU, OLED window (3mm)
+- TRRS side cutout cannot be done in Ergogen — use FreeCAD
+
 ### `pcbs`
 Defines the KiCad output (`hasbii_pcb`, template `kicad8`):
 
@@ -97,6 +107,10 @@ Defines the KiCad output (`hasbii_pcb`, template `kicad8`):
 Switch params shared via YAML anchor `&switches` / `<<: *switches`. Outer switch groups use `outer_pad_width_back: 2` or `outer_pad_width_front: 2` to prevent pads from extending past the board edge (avoids KiCad DRC errors).
 
 All footprints use `reversible: true` for the reversible PCB design.
+
+## Footprint Gotchas
+- `reset_switch_tht_top` — PTS636 (6×3.5mm), NOT the common 6×6 tactile. LCSC: C2689636
+- `trrs_pj320a` — specifically PJ-320A. LCSC: C7501806
 
 ## Footprint Library (`footprints/ceoloide/`)
 
@@ -114,18 +128,29 @@ Key available footprints:
 
 ## Current Status
 
-**Complete:**
-- `points` — matrix, thumbfan, MCU, screw hole zones
-- `outlines` — board polygon, preview, keycap/MCU visualization
-- `pcbs` — switches, diodes, mounting holes
+**Complete (Ergogen):**
+- `points` — matrix, thumbfan, MCU, display, TRRS, screw hole zones
+- `outlines` — board polygon, preview, case plate outlines
+- `pcbs` — switches, diodes, mounting holes, MCU (SuperMini nRF52840), OLED (SSD1306), TRRS (PJ-320A)
+- `cases` — mounting_plate, bottom_plate, top_frame STLs
+
+**Complete (KiCad — manual):**
+- Reset switch footprint — to be added manually (PTS636 6×3.5mm not sourced; using alternate)
 
 **Still needed:**
-- MCU footprint — ceoloide has `mcu_supermini_nrf52840` (recommended) or others; pin mapping to rows/columns required
-- TRRS jack — needs zone in `points` + footprint in `pcbs` (if wired); skip if using wireless MCU
-- Reset switch — needs zone in `points` + footprint in `pcbs`
-- Battery connector + power switch — only if using wireless MCU (e.g. SuperMini nRF52840)
-- KiCad routing — manual trace routing after Ergogen generation
-- Firmware — ZMK (if wireless) or KMK/QMK (if wired)
+- KiCad trace routing
+- DRC + Gerber export
+- TRRS side cutout in case (FreeCAD)
+- ZMK firmware config
+
+## TODO
+- [ ] Route traces in KiCad
+- [ ] Add reset switch footprint manually in KiCad
+- [ ] Run DRC and fix errors
+- [ ] Export Gerbers → order from JLCPCB or PCBWay
+- [ ] TRRS side cutout in FreeCAD/Fusion 360
+- [ ] ZMK firmware config (wireless, SuperMini nRF52840)
+- [ ] Order components: PJ-320A TRRS jack, 3×6mm reset switch, M2 screws + standoffs
 
 ## After Ergogen: Next Steps
 
