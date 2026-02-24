@@ -196,11 +196,29 @@ outlines:
       where: [key]
       size: 13.8
 
+  _screw_holes:
+    - what: circle
+      where: [board_screw]
+      radius: 1.1
+
   _mounting_plate:
     - what: outline
       name: board
     - what: outline
       name: _switch_cutouts
+      operation: subtract
+    - what: outline
+      name: _screw_holes
+      operation: subtract
+    - what: outline
+      name: _mcu
+      operation: subtract
+
+  _bottom_plate:
+    - what: outline
+      name: board
+    - what: outline
+      name: _screw_holes
       operation: subtract
 
   _top_frame:
@@ -208,6 +226,15 @@ outlines:
       name: board
     - what: outline
       name: _keycaps
+      operation: subtract
+    - what: outline
+      name: _screw_holes
+      operation: subtract
+    - what: outline
+      name: _mcu
+      operation: subtract
+    - what: outline
+      name: _display
       operation: subtract
 
   preview:
@@ -308,7 +335,7 @@ cases:
       extrude: 1.5
   bottom_plate:
     - what: outline
-      name: board
+      name: _bottom_plate
       extrude: 1.6
   top_frame:
     - what: outline
