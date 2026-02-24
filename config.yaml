@@ -74,7 +74,8 @@ points:
         - trrs
       anchor:
         - ref: mcu
-          shift: [0, mcuh/2 + 7]
+          shift: [mcuw/2, -mcuh+3]
+          rotate: -90
 
     board_screw_1:
       key.tags:
@@ -280,13 +281,3 @@ pcbs:
           TP: "VCC"
           R2: "DATA"
           SL: "GND"
-      reset_switch:
-        what: ceoloide/reset_switch_tht_top
-        where: mcu
-        params:
-          reversible: true
-          from: GND
-          to: RST
-        adjust:
-          shift: [mcuw/2, -mcuh/2-5]
-          rotate: 90
