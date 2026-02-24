@@ -60,7 +60,7 @@ points:
         - helper
       anchor:
         - ref: matrix_c1_r1
-          shift: [u+a*2, -u/4+a]
+          shift: [u+a*2, -u/3]
 
     display:
       key.tags:
@@ -296,20 +296,20 @@ pcbs:
         params:
           reversible: true
           only_required_jumpers: true
-          P2: "c1"
-          P3: "c2"
-          P4: "c3"
-          P5: "c4"
-          P6: "c5"
-          P7: "c6"
-          P21: "r1"
-          P20: "r2"
-          P19: "r3"
-          P18: "t2"
-          P15: "t1"
-          P8: "SDA"
-          P9: "SCL"
-          P0: "DATA"
+          P21: "c1"
+          P20: "c2"
+          P19: "c3"
+          P18: "c4"
+          P15: "c5"
+          P14: "c6"
+          P2: "r1"
+          P3: "SCL"
+          P4: "SDA"
+          P5: "t2"
+          P6: "t1"
+          P7: "r3"
+          P8: "r2"
+          P9: "DATA"
           use_rectangular_jumpers: false
       display:
         what: ceoloide/display_ssd1306
