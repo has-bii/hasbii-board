@@ -3,8 +3,8 @@ meta:
   author: "hasbii"
 units:
   a: 0.75
-  mcuw: 21
-  mcuh: 51
+  mcuw: 17.78
+  mcuh: 33
 points:
   key.tags:
     - key
@@ -16,13 +16,13 @@ points:
         c6:
         c5:
         c4.key:
-          stagger: u/4
+          stagger: u/8
         c3.key:
-          stagger: u/4
+          stagger: u/8
         c2.key:
-          stagger: -u/4
+          stagger: -u/8
         c1.key:
-          stagger: -u/4
+          stagger: -u/8
       rows:
         r3:
         r2:
@@ -31,7 +31,7 @@ points:
     thumbfan:
       anchor:
         ref: matrix_c4_r3
-        shift: [u/2+2, -u-u/3]
+        shift: [u/2, -u-a*2]
       columns:
         c5:
           rows:
@@ -59,8 +59,8 @@ points:
       key.tags:
         - helper
       anchor:
-        - ref: matrix_c1_r2
-          shift: [u+3, 7]
+        - ref: matrix_c1_r1
+          shift: [u+a*2, -u/3]
 
     board_screw_1:
       key.tags:
@@ -76,8 +76,9 @@ points:
         - board_screw
       anchor:
         aggregate.parts:
-          - ref: matrix_c3_r3
-        shift: [0, -u/2-6]
+          - ref: thumbfan_c4_r1
+          - ref: thumbfan_c5_r1
+        shift: [0, -u/2]
     board_screw_3:
       key.tags:
         - board_screw
@@ -145,8 +146,8 @@ outlines:
         - ref: mcu
           shift: [mcuw/2+a*3, 0]
           affect: [x]
-        - ref: mcu
-          shift: [0, -mcuh/2-6-a]
+        - ref: thumbfan_c2_r1
+          shift: [0, u/2-a*3]
           affect: [y]
         - ref: thumbfan_c1_r1
           shift: [-u/2+a, u/2+a]
@@ -163,7 +164,7 @@ outlines:
         - ref: thumbfan_c5_r2
           shift: [-u/2-a, -u/2-a]
         - ref: thumbfan_c5_r2
-          shift: [-u/2-a, u/2+a]
+          shift: [-u/2-a, u/2-a*2]
         - ref: matrix_c6_r3
           shift: [-u/2-a, 0]
           affect: [x]
@@ -219,3 +220,26 @@ pcbs:
         adjust:
           shift: [5.7, 0]
           rotate: 180
+      mcu:
+        what: ceoloide/mcu_supermini_nrf52840
+        where: mcu
+        params:
+          reversible: true
+          only_required_jumpers: true
+          P10: "r0"
+          P3: "r1"
+          P4: "r2"
+          P5: "r3"
+          P2: "c1"
+          P15: "c2"
+          P18: "c3"
+          P16: "c4"
+          P8: "c5"
+          P9: "c6"
+          P6: "DA"
+          P7: "CL"
+          P14: "CS"
+          P19_label: " "
+          P20_label: " "
+          P21_label: " "
+          use_rectangular_jumpers: false
