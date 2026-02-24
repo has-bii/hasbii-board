@@ -69,6 +69,13 @@ points:
         - ref: mcu
           shift: [0, -3.5]
 
+    trrs:
+      key.tags:
+        - trrs
+      anchor:
+        - ref: mcu
+          shift: [0, mcuh/2 + 7]
+
     board_screw_1:
       key.tags:
         - board_screw
@@ -255,6 +262,7 @@ pcbs:
           P15: "t1"
           P8: "SDA"
           P9: "SCL"
+          P0: "DATA"
           use_rectangular_jumpers: false
       display:
         what: ceoloide/display_ssd1306
@@ -263,3 +271,22 @@ pcbs:
           reversible: true
           SDA: "SDA"
           SCL: "SCL"
+      trrs:
+        what: ceoloide/trrs_pj320a
+        where: trrs
+        params:
+          reversible: true
+          symmetric: true
+          TP: "VCC"
+          R2: "DATA"
+          SL: "GND"
+      reset_switch:
+        what: ceoloide/reset_switch_tht_top
+        where: mcu
+        params:
+          reversible: true
+          from: GND
+          to: RST
+        adjust:
+          shift: [mcuw/2, -mcuh/2-5]
+          rotate: 90
