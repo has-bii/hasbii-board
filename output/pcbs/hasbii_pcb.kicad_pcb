@@ -7373,7 +7373,7 @@
     
   (footprint "ceoloide:trrs_pj320a (reversible, symmetric)"
     (layer "F.Cu")
-    (at 274.39 146 -90)
+    (at 274.39 142 -90)
     (property "Reference" "TRRS1"
       (at 0 14.2 -90)
       (layer "F.SilkS")

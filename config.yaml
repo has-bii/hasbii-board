@@ -191,6 +191,25 @@ outlines:
           affect: [x]
         - ref: matrix_c6_r1
           shift: [-u/2-a, u/2+a]
+  _switch_cutouts:
+    - what: rectangle
+      where: [key]
+      size: 13.8
+
+  _mounting_plate:
+    - what: outline
+      name: board
+    - what: outline
+      name: _switch_cutouts
+      operation: subtract
+
+  _top_frame:
+    - what: outline
+      name: board
+    - what: outline
+      name: _keycaps
+      operation: subtract
+
   preview:
     - what: outline
       name: board
@@ -281,3 +300,17 @@ pcbs:
           TP: "VCC"
           R2: "DATA"
           SL: "GND"
+
+cases:
+  mounting_plate:
+    - what: outline
+      name: _mounting_plate
+      extrude: 1.5
+  bottom_plate:
+    - what: outline
+      name: board
+      extrude: 1.6
+  top_frame:
+    - what: outline
+      name: _top_frame
+      extrude: 3
