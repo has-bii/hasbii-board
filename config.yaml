@@ -74,7 +74,7 @@ points:
         - trrs
       anchor:
         - ref: mcu
-          shift: [mcuw/2, -mcuh+3]
+          shift: [mcuw/2, -mcuh+7]
           rotate: -90
 
     board_screw_1:
