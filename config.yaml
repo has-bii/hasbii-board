@@ -1,82 +1,76 @@
 meta:
-  engine: 4.1.0
-  author: "hasbii"
+  engine: 4.2.1
+  author: hasbii
+  version: raw
 units:
-  a: 0.75
-  mcuw: 17.78
+  mcuw: 18
   mcuh: 33
+  spacing: 1
+  trrsw: 14
+  trrsh: 6
+  reset_switch_size: 6
 points:
   key.tags:
     - key
   zones:
     matrix:
-      anchor:
-        shift: [150, -150]
+      anchor.shift: [150, -150]
       columns:
-        c6:
-        c5:
-        c4.key:
-          stagger: u/8
+        c1:
+        c2:
         c3.key:
-          stagger: u/8
-        c2.key:
-          stagger: -u/8
-        c1.key:
-          stagger: -u/8
+          stagger: u/6
+        c4.key:
+          stagger: u/6
+        c5.key:
+          stagger: -u/6
+        c6.key:
+          stagger: -u/6
       rows:
         r3:
         r2:
         r1:
-
     thumbfan:
       anchor:
-        ref: matrix_c4_r3
-        shift: [u/2, -u-a*2]
+        ref: matrix_c3_r3
+        shift: [u/2, -u-2]
       columns:
-        c5:
+        c3:
           rows:
-            t1.skip: true
+            r4.skip: true
         c4:
           rows:
-            t1.skip: true
-        c3:
+            r4.skip: true
+        c5:
+          rows:
+            r4.skip: true
           key:
             splay: -12
             origin: [-u/2, -u/2]
-          rows:
-            t1.skip: true
-        c2.key:
-          splay: -12
-          origin: [-u/2, -u/2]
-        c1.key:
+        c6.key:
           splay: -12
           origin: [-u/2, -u/2]
       rows:
-        t2:
-        t1:
-
+        r5:
+        r4:
     mcu:
       key.tags:
         - helper
       anchor:
-        - ref: matrix_c1_r1
-          shift: [u+a*2, -u/3]
-
-    display:
-      key.tags:
-        - display
-      anchor:
-        - ref: mcu
-          shift: [0, -3.5]
-
+        ref: matrix_c6_r1
+        shift: [u+spacing*2, -spacing]
     trrs:
       key.tags:
         - trrs
       anchor:
         - ref: mcu
-          shift: [mcuw/2, -mcuh+7]
-          rotate: -90
-
+          shift: [2, -mcuh/2-trrsh/2-spacing*2]
+    reset_switch:
+      key.tags:
+        - reset_switch
+      anchor:
+        - ref: trrs
+          shift: [4, -trrsh/2-reset_switch_size/2-spacing*2]
     board_screw_1:
       key.tags:
         - board_screw
@@ -91,37 +85,25 @@ points:
         - board_screw
       anchor:
         aggregate.parts:
-          - ref: thumbfan_c4_t1
-          - ref: thumbfan_c5_t1
-        shift: [0, -u/2]
+          - ref: matrix_c1_r2
+          - ref: matrix_c2_r2
+          - ref: matrix_c1_r3
+          - ref: matrix_c2_r3
     board_screw_3:
       key.tags:
         - board_screw
       anchor:
         aggregate.parts:
-          - ref: thumbfan_c1_t1
-          - ref: thumbfan_c2_t1
-          - ref: thumbfan_c2_t2
-          - ref: thumbfan_c1_t2
-        shift: [0, 1]
+          - ref: matrix_c6_r1
+        shift: [0, u/2+3.5spacing]
     board_screw_4:
       key.tags:
         - board_screw
       anchor:
         aggregate.parts:
-          - ref: matrix_c5_r1
-          - ref: matrix_c6_r1
-          - ref: matrix_c6_r2
-          - ref: matrix_c5_r2
-    board_screw_5:
-      key.tags:
-        - board_screw
-      anchor:
-        aggregate.parts:
-          - ref: matrix_c5_r2
-          - ref: matrix_c6_r2
-          - ref: matrix_c6_r3
-          - ref: matrix_c5_r3
+          - ref: thumbfan_c5_r5
+          - ref: thumbfan_c6_r5
+        shift: [0, u/2+1.5spacing]
 
 outlines:
   _keycaps:
@@ -133,11 +115,15 @@ outlines:
     - what: rectangle
       where: [helper]
       size: [mcuw, mcuh]
-  _display:
+  _trrs:
     - what: rectangle
-      where: [display]
-      size: [12, 38]
-  _board_screw_heads:
+      where: trrs
+      size: [trrsw, trrsh]
+  _reset_switch:
+    - what: rectangle
+      where: reset_switch
+      size: [reset_switch_size, reset_switch_size]
+  _board_screw:
     - what: circle
       where: [board_screw]
       radius: 4.3/2
@@ -147,95 +133,48 @@ outlines:
     - what: outline
       name: _mcu
     - what: outline
-      name: _display
+      name: _trrs
+    - what: outline
+      name: _reset_switch
     - what: polygon
       points:
-        - ref: matrix_c6_r1
-          shift: [-u/2-a, u/2+a]
-        - ref: matrix_c5_r1
-          shift: [u/2-a, u/2+a]
-        - ref: matrix_c4_r1
-          shift: [-u/2-a, u/2+a]
-        - ref: matrix_c4_r1
-          shift: [u/2-a, u/2+a]
-        - ref: matrix_c3_r1
-          shift: [-u/2-a, u/2+a]
-        - ref: matrix_c3_r1
-          shift: [u/2+a, u/2+a]
+        - ref: matrix_c1_r1
+          shift: [-u/2-spacing, u/2+spacing]
         - ref: matrix_c2_r1
-          shift: [-u/2+a, u/2+a]
-        - ref: mcu
-          shift: [mcuw/2+a*3, 0]
+          shift: [u/2-spacing, 0]
           affect: [x]
-        - ref: thumbfan_c2_t1
-          shift: [0, u/2-a*3]
+        - ref: matrix_c3_r1
+          shift: [0, u/2+spacing]
           affect: [y]
-        - ref: thumbfan_c1_t1
-          shift: [-u/2+a, u/2+a]
-        - ref: thumbfan_c1_t1
-          shift: [u/2+a, u/2+a]
-        - ref: thumbfan_c1_t2
-          shift: [u/2+a, -u/2-a]
-        - ref: thumbfan_c1_t2
-          shift: [-u/2-a, -u/2-a]
-        - ref: thumbfan_c2_t2
-          shift: [-u/2-a, -u/2-a]
-        - ref: thumbfan_c3_t2
-          shift: [-u/2-a, -u/2-a]
-        - ref: thumbfan_c5_t2
-          shift: [-u/2-a, -u/2-a]
-        - ref: thumbfan_c5_t2
-          shift: [-u/2-a, u/2-a*2]
-        - ref: matrix_c6_r3
-          shift: [-u/2-a, 0]
+        - ref: matrix_c3_r1
+          shift: [u/2-spacing, 0]
           affect: [x]
-        - ref: matrix_c6_r1
-          shift: [-u/2-a, u/2+a]
-  _switch_cutouts:
-    - what: rectangle
-      where: [key]
-      size: 13.8
-
-  _screw_holes:
-    - what: circle
-      where: [board_screw]
-      radius: 1.1
-
-  _mounting_plate:
-    - what: outline
-      name: board
-    - what: outline
-      name: _switch_cutouts
-      operation: subtract
-    - what: outline
-      name: _screw_holes
-      operation: subtract
-    - what: outline
-      name: _mcu
-      operation: subtract
-
-  _bottom_plate:
-    - what: outline
-      name: board
-    - what: outline
-      name: _screw_holes
-      operation: subtract
-
-  _top_frame:
-    - what: outline
-      name: board
-    - what: outline
-      name: _keycaps
-      operation: subtract
-    - what: outline
-      name: _screw_holes
-      operation: subtract
-    - what: outline
-      name: _mcu
-      operation: subtract
-    - what: outline
-      name: _display
-      operation: subtract
+        - ref: matrix_c4_r1
+          shift: [0, u/2+spacing]
+          affect: [y]
+        - ref: matrix_c4_r1
+          shift: [u/2+spacing, 0]
+          affect: [x]
+        - ref: mcu
+          shift: [mcuw/2+spacing*2, 0]
+          affect: [x]
+        - ref: thumbfan_c6_r4
+          shift: [0, u/2-8]
+          affect: [y]
+        - ref: thumbfan_c6_r5
+          shift: [u/2+spacing, -u/2-spacing]
+        - ref: thumbfan_c5_r5
+          shift: [u/2, -u/2-spacing]
+        - ref: thumbfan_c4_r5
+          shift: [u/2-spacing, -u/2-spacing]
+        - ref: thumbfan_c3_r5
+          shift: [-u/2-spacing, -u/2-spacing]
+        - ref: thumbfan_c3_r5
+          shift: [0, u/2-2]
+          affect: [y]
+        - ref: matrix_c1_r3
+          shift: [-u/2-spacing, 0]
+          affect: [x]
 
   preview:
     - what: outline
@@ -247,10 +186,13 @@ outlines:
       name: _mcu
       operation: stack
     - what: outline
-      name: _display
+      name: _board_screw
       operation: stack
     - what: outline
-      name: _board_screw_heads
+      name: _trrs
+      operation: stack
+    - what: outline
+      name: _reset_switch
       operation: stack
 
 pcbs:
@@ -262,7 +204,7 @@ pcbs:
     footprints:
       m2_screws:
         what: ceoloide/mounting_hole_npth
-        where: /board_screw/
+        where: [board_screw]
         params:
           hole_size: 4.6
           hole_drill: 2.2
@@ -270,74 +212,59 @@ pcbs:
         what: ceoloide/switch_choc_v1_v2
         where:
           - /matrix_c[1-6]_r[1-3]/
-          - /thumbfan_c[1-5]_t[1-2]/
+          - /thumbfan_c[3-6]_r[4-5]/
         params:
-          from: "{{colrow}}"
-          to: "{{col.name}}"
+          from: "{{col.name}}"
+          to: "{{colrow}}"
           choc_v1_support: false
           include_plated_holes: false
-          reversible: true
+          hotswap: true
           include_stabilizer_pad: false
-        adjust:
-          rotate: 180
-      diodes:
-        what: ceoloide/diode_tht_sod123
-        where: /key/
+      diode:
+        what: diode
+        where: [key]
         params:
           from: "{{colrow}}"
           to: "{{row}}"
-          reversible: true
         adjust:
-          shift: [5.7, 0]
-          rotate: 180
+          shift: [3, -5]
       mcu:
-        what: ceoloide/mcu_supermini_nrf52840
-        where: mcu
+        what: promicro
+        where: helper
         params:
-          reversible: true
-          only_required_jumpers: true
-          P21: "c1"
-          P20: "c2"
-          P19: "c3"
-          P18: "c4"
-          P15: "c5"
-          P14: "c6"
-          P2: "r1"
-          P3: "SCL"
-          P4: "SDA"
-          P5: "t2"
-          P6: "t1"
-          P7: "r3"
-          P8: "r2"
-          P9: "DATA"
-          use_rectangular_jumpers: false
-      display:
-        what: ceoloide/display_ssd1306
-        where: display
-        params:
-          reversible: true
-          SDA: "SDA"
-          SCL: "SCL"
+          orientation: "up"
+          P4: r1
+          P5: r2
+          P6: r3
+          P7: r4
+          P8: r5
+          P9: c1
+          P21: c2
+          P20: c3
+          P19: c4
+          P18: c5
+          P15: c6
+          P10: DATA
+        adjust:
+          rotate: -90
       trrs:
         what: ceoloide/trrs_pj320a
         where: trrs
         params:
-          reversible: true
-          symmetric: true
+          reversible: false
+          symmetric: false
           TP: "VCC"
+          R1: "GND"
           R2: "DATA"
           SL: "GND"
+        adjust:
+          rotate: -90
+          shift: [trrsw/2, 0]
+      reset:
+        what: button
+        where: reset_switch
+        params:
+          from: GND
+          to: RST
 
 cases:
-  mounting_plate:
-    - what: outline
-      name: _mounting_plate
-      extrude: 1.5
-  bottom_plate:
-    - what: outline
-      name: _bottom_plate
-      extrude: 1.6
-  top_frame:
-    - what: outline
-      name: _top_frame
-      extrude: 3
